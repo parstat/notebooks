@@ -79,5 +79,7 @@ docker volume create zeppelin-notebook
 ```
 Run the container:
 ```
-docker run --rm -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -v jupyter-notebook:/home/jovyan/work jupyter/r-notebook
+docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v jupyter-notebook:/home/jovyan/work jupyter/r-notebook
 ```
+Visiting ``` http://localhost:8888/?token=<token> ``` in a browser loads JupyterLab, where token is the secret token printed in the console.
+Docker destroys the container after notebook server exit, but any files written to ~/work in the container remain intact on the host.
