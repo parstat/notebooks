@@ -77,7 +77,7 @@ IRkernel::installspec()  # to register the kernel in the current R installation
 There are planty of official docker [https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html](images) to choose from. The below example shows how to start jupyter with r kernel:
 Create the volume
 ```
-docker volume create zeppelin-notebook
+docker volume create jupyter-notebook
 ```
 Run the container:
 ```
