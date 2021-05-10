@@ -51,6 +51,8 @@ docker run -d --restart always -p 8080:8080  -v zeppelin-notebook:/opt/zeppelin/
 To build an image that does not use anaconda use the Dockerfile found in this repository*
 
 ## Jupyter
+[Jupyter](https://jupyter.org/)
+
 ### Install Python 3
 To install pyhton 3 in your environment OS please follow the instruction found in this page: https://www.python.org/downloads/
 
