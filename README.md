@@ -2,7 +2,7 @@
 Resources for notebooks (Jupyter &amp; Zeppelin)
 
 ## Zeppelin
-[http://zeppelin.apache.org/docs/0.9.0/](Zepplein 0.9.0)
+[Zepplein 0.9.0](http://zeppelin.apache.org/docs/0.9.0/)
 
 ### Installation
 On this page are instructions to help you get started.
@@ -15,12 +15,12 @@ Apache Zeppelin officially supports and is tested on the following environments:
 |OS                    | MacOSX & Ubuntu 16.x|
 
 #### Downloading Binary Package
-Two binary packages are available on the [http://zeppelin.apache.org/download.html](download page). Only difference between these two binaries is interpreters are included in the package file.
+Two binary packages are available on the [download page](http://zeppelin.apache.org/download.html). Only difference between these two binaries is interpreters are included in the package file.
 * all interpreter package: unpack it in a directory of your choice and you're ready to go.
 * net-install interpreter package: unpack and follow install additional interpreters to install interpreters. If you're unsure, just run ./bin/install-interpreter.sh --all and install all interpreters.
 
 #### Building Zeppelin from source
-  Follow the instructions [http://zeppelin.apache.org/docs/0.9.0/setup/basics/how_to_build.html](How to Build), If you want to build from source instead of using binary package.
+  Follow the instructions [How to Build ](http://zeppelin.apache.org/docs/0.9.0/setup/basics/how_to_build.html), If you want to build from source instead of using binary package.
   
 #### Starting Apache Zeppelin
 ##### Starting Apache Zeppelin from the Command Line
