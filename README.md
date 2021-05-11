@@ -57,7 +57,7 @@ To build an image that does not use anaconda use the Dockerfile found in this re
 To install pyhton 3 in your environment OS please follow the instruction found in this page: https://www.python.org/downloads/
 
 ### Install jupyter-lab
-After python has been installed you can isntall jupyter-lap
+After python has been installed you can isntall jupyter-lab
 ```
 pip install jupyterlab
 ```
