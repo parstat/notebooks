@@ -1,0 +1,29 @@
+name: Docker Zeppelin Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+env:
+  APP_NAME: parstat.azurecr.io/zeppelin
+  APP_TAG: 0.10.0_no_conda_outh
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to Azure Container Registry
+      uses: azure/docker-login@v1
+      with:
+        login-server: ${{ secrets.REGISTRY_NAME }}.azurecr.io
+        username: ${{ secrets.REGISTRY_NAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+    - name: Build the Docker image
+      run: docker build docker/zeppelin --file Dockerfile --tag ${{ env.APP_NAME }}:${{ env.APP_TAG }}
+    - name: Push Image to Docker Repository
+      run: docker push ${{ secrets.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ env.APP_TAG }}
