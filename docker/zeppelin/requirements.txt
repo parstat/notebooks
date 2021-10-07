@@ -10,7 +10,7 @@ ipython>=7
 matplotlib>=3
 ipykernel>=5
 jupyter_client>=5
-bokeh==2.3.1
+bokeh==2.4.0
 panel
 holoviews
 pyyaml>=3
