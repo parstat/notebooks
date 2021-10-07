@@ -26,4 +26,4 @@ jobs:
     - name: Build the Docker image
       run: docker build docker/zeppelin/ --tag ${{ env.APP_NAME }}:${{ env.APP_TAG }}
     - name: Push Image to Docker Repository
-      run: docker push parstat.azurecr.io/${{ env.APP_NAME }}:${{ env.APP_TAG }}
+      run: docker push ${{ env.APP_NAME }}:${{ env.APP_TAG }}
