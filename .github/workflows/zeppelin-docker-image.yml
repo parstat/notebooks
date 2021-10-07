@@ -24,6 +24,6 @@ jobs:
         username: ${{ secrets.REGISTRY_NAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: Build the Docker image
-      run: docker build docker/zeppelin/docker --file Dockerfile --tag ${{ env.APP_NAME }}:${{ env.APP_TAG }}
+      run: docker build docker/zeppelin/ --file Dockerfile --tag ${{ env.APP_NAME }}:${{ env.APP_TAG }}
     - name: Push Image to Docker Repository
       run: docker push ${{ secrets.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ env.APP_TAG }}
