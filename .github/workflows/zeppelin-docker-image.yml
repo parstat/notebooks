@@ -20,10 +20,10 @@ jobs:
     - name: Login to Azure Container Registry
       uses: azure/docker-login@v1
       with:
-        login-server: ${{ secrets.REGISTRY_NAME }}.azurecr.io
-        username: ${{ secrets.REGISTRY_NAME }}
+        login-server: parstat.azurecr.io
+        username: parstat
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: Build the Docker image
       run: docker build docker/zeppelin/ --tag ${{ env.APP_NAME }}:${{ env.APP_TAG }}
     - name: Push Image to Docker Repository
-      run: docker push ${{ secrets.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ env.APP_TAG }}
+      run: docker push parstat.azurecr.io/${{ env.APP_NAME }}:${{ env.APP_TAG }}
