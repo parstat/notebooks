@@ -19,3 +19,4 @@ intake
 plotnine
 seaborn
 pycspro==1.0.6
+folium

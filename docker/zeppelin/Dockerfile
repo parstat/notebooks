@@ -17,7 +17,7 @@ FROM ubuntu:20.04
 
 LABEL maintainer="Parstat <florian.nika@parstat.md>"
 
-ENV Z_VERSION="0.9.0"
+ENV Z_VERSION="0.10.0"
 
 ENV LOG_TAG="[ZEPPELIN_${Z_VERSION}]:" \
     ZEPPELIN_HOME="/opt/zeppelin" \
@@ -68,7 +68,7 @@ RUN echo "$LOG_TAG Download Zeppelin binary" && \
     mkdir -p ${ZEPPELIN_HOME} && \
     #TODO uncomment when building in a server
     wget -nv -O /tmp/zeppelin-${Z_VERSION}-bin-all.tgz https://archive.apache.org/dist/zeppelin/zeppelin-${Z_VERSION}/zeppelin-${Z_VERSION}-bin-all.tgz && \
-    #tar --strip-components=1 -zxvf  /tmp/zeppelin-${Z_VERSION}-bin-all.tgz -C ${ZEPPELIN_HOME} && \
+    tar --strip-components=1 -zxvf  /tmp/zeppelin-${Z_VERSION}-bin-all.tgz -C ${ZEPPELIN_HOME} && \
     rm -f /tmp/zeppelin-${Z_VERSION}-bin-all.tgz
     
 RUN echo "$LOG_TAG Folder rights" && \
