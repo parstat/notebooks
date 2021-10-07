@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 env:
   APP_NAME: parstat.azurecr.io/zeppelin
-  APP_TAG: 0.10.0_no_conda_outh
+  APP_TAG: 0.10.0_no_conda_auth
 
 jobs:
 
