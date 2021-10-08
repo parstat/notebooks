@@ -41,7 +41,7 @@ RUN echo "$LOG_TAG install python pip" && \
     apt-get -y install python3-pip &&\
     #ln -s /usr/bin/pip3 /usr/bin/pip &&\
     #ln -s /usr/bin/python3 /usr/bin/python &&\
-    apt-get -y install python-is-python3
+    apt-get -y install python-is-python3 &&\
     pip install -r /requirements.txt
 
 ENV DEBIAN_FRONTEND noninteractive
