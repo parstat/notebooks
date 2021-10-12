@@ -84,7 +84,7 @@ RUN echo "$LOG_TAG Folder rights" && \
 
 COPY log4j.properties ${ZEPPELIN_HOME}/conf/
 COPY log4j_docker.properties ${ZEPPELIN_HOME}/conf/
-COPY shiro.ini ${ZEPPELIN_HOME}/config/
+COPY shiro.ini ${ZEPPELIN_HOME}/conf/
 
 USER 1000
 
