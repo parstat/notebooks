@@ -3,6 +3,8 @@ name: Docker Zeppelin Image CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'docker/zeppelin/'
   pull_request:
     branches: [ main ]
 env:
