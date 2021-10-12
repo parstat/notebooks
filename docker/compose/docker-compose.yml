@@ -1,0 +1,19 @@
+version: "3.9"
+
+services: 
+  zeppelin:
+    image: parstat.azurecr.io/zeppelin:0.10.0_no_conda_auth
+    volumes:
+      - zeppelin-conf:/opt/zeppelin/conf
+      - zeppelin-notebook:/opt/zeppelin/notebook
+      - zeppelin-logs:/opt/zeppelin/logs
+      - zeppelin-interpreter:/opt/zeppelin/interpreter
+    ports:
+      - 8080:8080
+    restart: always
+    
+volumes:
+  zeppelin-conf:
+  zeppelin-notebook:
+  zeppelin-logs:
+  zeppelin-interpreter:
